@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  -->
+  <script src="1.js"></script>
+</head>
+<body>
+
+    <button id="ajaxButton" type="button">Make a request</button>
+
+    <img src="https://picsum.photos/200/300/?random" alt="">
+
+    <script>
+    (function() {
+
+      var resp_arr;
+
+      var httpRequest;
+      document.getElementById("ajaxButton").addEventListener('click', makeRequest);
+    
+      function makeRequest() {
+        httpRequest = new XMLHttpRequest();
+    
+        if (!httpRequest) {
+          alert('Giving up :( Cannot create an XMLHTTP instance');
+          return false;
+        }
+        httpRequest.onreadystatechange = alertContents;
+        httpRequest.open('GET', 'https://picsum.photos/list');
+        httpRequest.send();
+      }
+    
+      function alertContents() {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+          if (httpRequest.status === 200) {
+            resp_arr = JSON.parse( httpRequest.responseText );
+
+            console.log(resp_arr[0]);
+          } else {
+            alert('There was a problem with the request.');
+          }
+        }
+      }
+    })();
+    </script>
+  
+</body>
+</html>
