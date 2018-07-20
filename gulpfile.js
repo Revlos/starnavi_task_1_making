@@ -5,13 +5,19 @@ gulp.task("server", function() {
   browserSync.init({
     server: {
       /**/
+      baseDir: "help_tasks/4_5",
+      index: "4_5.html"
+      /*
       baseDir: "help_tasks/3",
-      index: "3.html"
+      index: "3.html"*/
       /*
       baseDir: "help_tasks/2",
       index: "2.html"*/
       /*
       baseDir: "production"*/
+      /*
+      baseDir: "help_tasks/0",
+      index: "0.html"*/
     },
     open: false
   });
