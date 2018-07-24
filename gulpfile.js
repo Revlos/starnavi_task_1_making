@@ -5,8 +5,11 @@ gulp.task("server", function() {
   browserSync.init({
     server: {
       /**/
+      baseDir: "help_tasks/8",
+      index: "8.html"
+      /*
       baseDir: "help_tasks/6_7",
-      index: "6_7.html"
+      index: "6_7.html"*/
       /*
       baseDir: "help_tasks/6",
       index: "6.html"*/
