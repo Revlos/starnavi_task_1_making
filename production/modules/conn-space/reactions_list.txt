@@ -1,0 +1,8 @@
+- Here will be present list of all reactions that available with modules.
+- Below is reaction names, for call, plus what need to be passed as data.
+
+img_set.get_imgs_set - cb(imgs_arr)
+
+ls_favorites.write - imgs_arr
+ls_favorites.read - cb(imgs_arr)
+ls_favorites.delete - none

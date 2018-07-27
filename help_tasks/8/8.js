@@ -20,7 +20,7 @@ cs_inner.indexOfStatement = function(statement) {
   var statm_indx = -1;
 
   if(cs_inner.st_and_react_arr.length !== 0) {
-    for(var i = 0; i <= cs_inner.st_and_react_arr.length; i++) {
+    for(var i = 0; i < cs_inner.st_and_react_arr.length; i++) {
       if(cs_inner.st_and_react_arr[i].statement === statement) {
         statm_indx = i;
         break;

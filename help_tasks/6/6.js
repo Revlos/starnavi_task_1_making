@@ -1,3 +1,5 @@
+//LocalStorage:
+
 var favorite_l_s = {};
 
 favorite_l_s.supported = false;
