@@ -1,0 +1,33 @@
+.filter {
+  padding: 10px;
+}
+
+.filter ul {
+  padding: 0;
+  list-style: none;
+}
+
+.filter__main_h {
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+.filter h2 {
+  background-color: lightgray;
+}
+
+.filter__author__authors {
+  height: 100px;
+  overflow-y: auto;
+}
+
+.filter a {
+
+  display: block;
+
+  margin-left: 10px;
+}
+
+.filter__item--selected {
+  background-color: lightcoral;
+}

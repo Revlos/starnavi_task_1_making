@@ -6,3 +6,10 @@ img_set.get_imgs_set - cb(imgs_arr)
 ls_favorites.write - imgs_arr
 ls_favorites.read - cb(imgs_arr)
 ls_favorites.delete - none
+
+head.toggle_img_in_favor - img_data
+head.get_imgs_arr - cb(imgs_arr)
+
+filter.build - none
+
+imgs_show.build_with - imgs_arr

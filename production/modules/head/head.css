@@ -1,0 +1,32 @@
+.head_md__head {
+  background-color: gray;
+  padding: 20px;
+  padding-right: 300px;
+}
+
+.head_md__head__on {
+  float: left;
+}
+
+.head_md__head__go {
+  float: right;
+}
+
+.clearfix::after { 
+  content: "";
+  display: block; 
+  clear: both;
+}
+
+/*Aside and main:*/
+.main {
+  box-sizing: border-box;
+  width: 80%;
+  float: left;
+}
+
+.aside {
+  box-sizing: border-box;
+  width: 20%;
+  float: left;
+}

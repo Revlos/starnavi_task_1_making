@@ -9,11 +9,55 @@
   <script src="modules/conn-space/conn-space.js"></script>
   <script src="modules/imgs-set/imgs-set.js"></script>
   <script src="modules/ls-favorites/ls-favorites.js"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="modules/head/head.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="modules/filter/filter.css" />
+  
+
   <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 </head>
 <body>
-  test
+  <!--Head:-->
+  <div class="head_md">
+    <div class="head_md__head clearfix">
+      <span class="head_md__head__on">`</span>
+      <span class="head_md__head__go">
+        <a href="javascript:;">`</a>
+      </span>
+    </div>
+    <div class="head_md__imgs_cont clearfix" data-head-md-on>
+      <div class="main">
+        Main
+      </div>
+      <div class="aside">
+        <div class="filter">
+          <h1 class="filter__main_h">
+            Filter by
+          </h1>
+      
+          <div class="filter__gener">
+            <span class="filter__gener__none"><a href="javascript:;">None</a></span> 
+          </div>
+      
+          <div class="filter__size">
+            <h2 class="filter__h">Size</h2>
+            <ul class="filter__size__sizes">
+            </ul>
+          </div>
+      
+          <div class="filter__author">
+            <h2 class="filter__h">Author</h2>
+            <ul class="filter__author__authors">
+              <li><a href="javascript:;" data-filter-by="All">All</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   
 
+  <script src="modules/head/head.js"></script>
+  <script src="modules/filter/filter.js"></script>
 </body>
 </html>
