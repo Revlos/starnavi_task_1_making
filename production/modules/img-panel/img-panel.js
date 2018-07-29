@@ -65,7 +65,8 @@
       ret_str +='</a>';
       //Img star:
       ret_str +='<a class="img_panel__imgs__star" href="javascript:;"' + 
-        'data-img-id="' + img.id +'" data-img-star-on="' + img.in_favor + '">Star</a>';
+        'data-img-id="' + img.id +'" data-img-star-on="' + img.in_favor + '">';
+      ret_str += '<i class="fas fa-star"></i></a>';
       //Img /cont:
       ret_str +='</div>';
     });

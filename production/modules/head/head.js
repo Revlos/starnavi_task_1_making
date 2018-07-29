@@ -182,14 +182,14 @@
       case head_md.inner.init.views[0]://All images
         on_elm.innerHTML = head_md.inner.init.views[0];
         if(head_md.inner.model.favor_imgs_num === 0) {
-          go_a_elm.innerHTML = "Star off";
+          go_a_elm.innerHTML = '';
         } else {
-          go_a_elm.innerHTML = "Star on";
+          go_a_elm.innerHTML = '<i class="fas fa-star"></i>';
         }
         break;
       case head_md.inner.init.views[1]://Favorits
         on_elm.innerHTML = head_md.inner.init.views[1];
-        go_a_elm.innerHTML = "Go to all";
+        go_a_elm.innerHTML = '<i class="fas fa-arrow-left"></i>';
         break;
       default:
         break;
