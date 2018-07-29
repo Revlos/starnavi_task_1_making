@@ -1,4 +1,7 @@
 node_modules
 
+distribution
+!distribution/.gitkeep
+
 !.gitignore
 !.gitkeep
