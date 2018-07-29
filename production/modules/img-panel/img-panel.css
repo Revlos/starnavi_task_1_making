@@ -1,0 +1,55 @@
+.img_panel {
+  font-size: 1.5rem;
+}
+
+.img_panel__nav__num {
+  display: inline;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.img_panel__nav__num li {
+  display: inline;
+}
+
+.img_panel__nav__num__item--selected {
+  background-color: lightsalmon;
+}
+
+.img_panel__imgs__img_cont {
+  display: inline-block;
+  position: relative;
+}
+
+.img_panel__imgs__img_a{
+  display: block;
+}
+
+.img_panel__imgs__star {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  background-color: aqua;
+  z-index: 1000;
+
+  display: none;
+}
+
+.img_panel__imgs__img_cont:hover .img_panel__imgs__star {
+  display: block;
+}
+
+.img_panel__imgs__star[data-img-star-on="true"] {
+  display: block;
+}
+
+/*Different style of favor images when in favor view of head:*/
+.head_md__imgs_cont[data-head-md-on="favor"] 
+.img_panel__imgs__img_cont[data-img-star-on="false"] {
+  opacity: 0.5;
+}

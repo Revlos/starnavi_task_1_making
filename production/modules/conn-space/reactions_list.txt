@@ -12,4 +12,6 @@ head.get_imgs_arr - cb(imgs_arr)
 
 filter.build - none
 
-imgs_show.build_with - imgs_arr
+img_panel.build_with - imgs_arr
+
+one_img_show.show_img - img_data

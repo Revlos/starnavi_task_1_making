@@ -9,8 +9,9 @@
   <script src="modules/conn-space/conn-space.js"></script>
   <script src="modules/imgs-set/imgs-set.js"></script>
   <script src="modules/ls-favorites/ls-favorites.js"></script>
-  <link rel="stylesheet" type="text/css" media="screen" href="modules/head/head.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="modules/filter/filter.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="modules/head/head.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="modules/filter/filter.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="modules/img-panel/img-panel.css"/>
   
 
   <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
@@ -26,9 +27,44 @@
     </div>
     <div class="head_md__imgs_cont clearfix" data-head-md-on>
       <div class="main">
-        Main
+        <!--Images panel-->
+        <div class="img_panel">
+          <div class="img_panel__imgs">
+            <div class="img_panel__imgs__img_cont" data-img-star-on="true">
+              <a href="javascript:;" class="img_panel__imgs__img_a" data-img-indx="0">
+                <img src="https://picsum.photos/200?image=0" alt="">
+              </a>
+              <a class="img_panel__imgs__star" href="javascript:;"
+              data-img-indx="0" data-img-star-on="true">Star</a>
+            </div>
+            <div class="img_panel__imgs__img_cont">
+                <a href="javascript:;" class="img_panel__imgs__img_a" data-img-indx="0">
+                  <img src="https://picsum.photos/200?image=0" alt="">
+                </a>
+                <a class="img_panel__imgs__star" href="javascript:;"
+                data-img-indx="0" data-img-star-on="false">Star</a>
+              </div>
+          </div>
+          <div class="img_panel__nav__container">
+            <div class="img_panel__nav">
+              <a href="javascript:;" class="img_panel__nav__beg">&#x226A;</a>
+              <a href="javascript:;" class="img_panel__nav__prev">&#60;</a>
+              <ul class="img_panel__nav__num">
+                <li><a href="javascript:;" class="img_panel__nav__num__item">1</a></li>
+                <li><a href="javascript:;" class="img_panel__nav__num__item">2</a></li>
+                <li><a href="javascript:;" class="img_panel__nav__num__item">3</a></li>
+              </ul>
+              <a href="javascript:;" class="img_panel__nav__next">&#x3e;</a>
+              <a href="javascript:;" class="img_panel__nav__end">&#x226B;</a>
+              <!--
+              <label>Go to: <input type="text" class="img_panel__nav__goto"></label>
+              -->
+            </div>
+          </div>
+        </div>
       </div>
       <div class="aside">
+        <!--Filter:-->
         <div class="filter">
           <h1 class="filter__main_h">
             Filter by
@@ -59,5 +95,6 @@
 
   <script src="modules/head/head.js"></script>
   <script src="modules/filter/filter.js"></script>
+  <script src="modules/img-panel/img-panel.js"></script>
 </body>
 </html>

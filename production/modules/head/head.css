@@ -1,3 +1,8 @@
+/*General stile:*/
+a {
+  text-decoration: none;
+}
+
 .head_md__head {
   background-color: gray;
   padding: 20px;

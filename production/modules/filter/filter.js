@@ -20,7 +20,7 @@
   };
 
   filter.inner.init.filter_res_cb = function(result) {
-    cs.say("imgs_show.build_with", result);
+    cs.say("img_panel.build_with", result);
   };
 
   //Model:
@@ -258,7 +258,7 @@
       a_elm.onclick = function(e) {
       
       filter.inner.model._all = false;
-      filter.inner.model.size = e.target.getAttribute("data-filter-by");
+      filter.inner.model.size = e.currentTarget.getAttribute("data-filter-by");
   
       filter.inner.controller.apply_filter();
   
@@ -274,7 +274,7 @@
       a_elm.onclick = function(e) {
       
       filter.inner.model._all = false;
-      filter.inner.model.author = e.target.getAttribute("data-filter-by");
+      filter.inner.model.author = e.currentTarget.getAttribute("data-filter-by");
   
       filter.inner.controller.apply_filter();
   

@@ -51,7 +51,7 @@
       if(favor_arr.lenght !== 0) {
         favor_arr.forEach(function(favor_arr_img) {
           if(favor_arr_img.hasOwnProperty("in_favor")) {
-            var imgs_arr_indx = head_md.inner.controller.indexOfImg(
+            var imgs_arr_indx = head_md.inner.controller.index_of_img_by_id(
               head_md.inner.model.imgs_arr,
               favor_arr_img
             );
@@ -84,16 +84,19 @@
   //Controller:
   head_md.inner.controller = {};
 
-  //Search index of "img" on ID in "search_arr":
+  //Search index of "img" by ID in "search_arr":
   //-Will return -1 if not found.
-  head_md.inner.controller.indexOfImg = function(search_arr, img) {
+  head_md.inner.controller.index_of_img_by_id = function(search_arr, img) {
+
+    var ret_indx = -1;
+
     search_arr.forEach(function(sel_img, sel_img_indx) {
       if(sel_img.id === img.id) {
-        return sel_img_indx;
-      } else {
-        return -1;
+        ret_indx = sel_img_indx;
       }
     });
+
+    return ret_indx;
   };
 
   //Get from imgs_arr only that imgs that is in favor:
@@ -115,18 +118,22 @@
   //-Accepts image data.
   head_md.inner.controller.toggle_img_in_favor = function(img_data) {
 
-    var search_indx = head_md.inner.controller.indexOfImg(
+    var toggle_img_indx = head_md.inner.controller.index_of_img_by_id(
       head_md.inner.model.imgs_arr, img_data);
 
-    if( search_indx === -1) {
-      //Add:
-      img_data.in_favor = true;
-      head_md.inner.model.imgs_arr.push(img_data);
-      head_md.inner.model.favor_imgs_num++;
-    } else {
-      //Remove:
-      head_md.inner.model.imgs_arr.splice(search_indx, 1);
-      head_md.inner.model.favor_imgs_num--;
+
+    if( toggle_img_indx !== -1) {
+      if(head_md.inner.model.imgs_arr[toggle_img_indx].in_favor === true) {
+        //Remove from favor:
+        head_md.inner.model.imgs_arr[toggle_img_indx].in_favor = false;
+        //Decrement favor imgs num:
+        head_md.inner.model.favor_imgs_num--;
+      } else {
+        //Add to favor:
+        head_md.inner.model.imgs_arr[toggle_img_indx].in_favor = true;
+        //Increment favor imgs num:
+        head_md.inner.model.favor_imgs_num++;
+      }
     }
 
     //Push changed favor part to local storage:
